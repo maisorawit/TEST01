@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.css">
+
+</head>
+
+<body>
+
+    <section class="hero is-primary">
+        <div class="hero-body has-text-centered">
+            <div class="container">
+                <p class="title has-">
+                    Login
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="hero-body has-text-centered">
+            <div class="container">
+                <p>
+                    <b>
+                        <font size=5>
+                            UserName
+                        </font>
+                    </b>
+                </p><br>
+
+
+                <div>
+                    <input class="input" type="text" id="username">
+                </div><br>
+
+                <p>
+                    <b>
+                        <font size=5>
+                            Password
+                        </font>
+                    </b>
+                </p><br>
+                <div>
+                    <input class="input" type="password" id="password">
+                </div><br>
+
+                <p>
+                    <b>
+                        <font size=5>
+                            AutoBot
+                        </font>
+                    </b>
+                </p><br>
+                <div>
+                    <input class="input" type="text" id="autobot" placeholder="Fill Number">
+                </div>
+                <p>
+                    <a target="_blank" href="forgetpassword.html">Forget Password?</a>
+                </p><br>
+
+                <div>
+                    <button class="button" id="login" onclick="checkLogin()">Login</button>
+                </div><br>
+
+                <!-- <div> <a href="success.html">success</a> </div> -->
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var autobot = document.getElementById("autobot");
+
+
+        function checkLogin() {
+            if (username.value == "admin" && password.value == "1234") {
+                open("loginSuccess.html")
+            }
+            else if (username.value == "" && password.value == "") {
+                // showError()
+                alert("error")
+            }
+
+        }
+
+        function showError(error) {
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
